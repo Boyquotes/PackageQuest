@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://ds4yluowr51x"]
+
+[ext_resource type="Script" path="res://CharacterBody2D.gd" id="1_gdpan"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5ta3g"]
+size = Vector2(11, 15)
+
+[sub_resource type="BoxMesh" id="BoxMesh_rt6w2"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+position = Vector2(317, 167)
+script = ExtResource("1_gdpan")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(5.5, 3.5)
+shape = SubResource("RectangleShape2D_5ta3g")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="CharacterBody2D"]
+position = Vector2(5.75, 5.75)
+scale = Vector2(11.5, 11.5)
+mesh = SubResource("BoxMesh_rt6w2")
